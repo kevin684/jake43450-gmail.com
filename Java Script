@@ -1,42 +1,52 @@
 <Hello World> 
 
-<script src="scripts/main.js"></script>
+ <script src="scripts/main.js"></script>
 
-const myHeading = document.querySelector('h1');
-myHeading.textContent = 'Hello world!';
+ const myHeading = document.querySelector('h1');
+ myHeading.textContent = 'Hello world!';
 
-let myVariable;
+ let myVariable;
 
-myVariable = 'Bob';
+ myVariable = 'Bob';
 
-let myVariable = 'Bob';
+ let myVariable = 'Bob';
+ myVariable;
 
-myVariable;
+ let myVariable = 'Bob';
+ myVariable = 'Steve';
 
-let myVariable = 'Bob';
-myVariable = 'Steve';
+ let myVariable = document.querySelector('h1');
 
-let myVariable = document.querySelector('h1');
+ alert('hello!');
 
-alert('hello!');
-
-document.querySelector('html').onclick = function() {
-    alert('Ouch! Stop poking me!');
+ document.querySelector('html').onclick = function() {
+ alert('Ouch! Stop poking me!');
     
-    document.querySelector('html').onclick = function() {};
-    
-    <button>Change user</button>
-    
-    myButton.onclick = function() {
+ document.querySelector('html').onclick = function() {};   
+ <button>Change user</button>
+ 
+  if(!localStorage.getItem('name')) {
+  setUserName();
+  
+} else {
+
+  let storedName = localStorage.getItem('name');
+  myHeading.textContent = 'Mozilla is cool, ' + storedName;
+}
+
+  myButton.onclick = function() {
   setUserName();
 }
 
-function setUserName() {
+  function setUserName() {
+
   let myName = prompt('Please enter your name.');
   if(!myName || myName === null) {
-    setUserName();
-  } else {
-    localStorage.setItem('name', myName);
-    myHeading.innerHTML = 'Mozilla is cool, ' + myName;
+  setUserName();
+    
+} else {
+  
+  localStorage.setItem('name', myName);
+  myHeading.innerHTML = 'Mozilla is cool, ' + myName;
   }
 }  
