@@ -1,4 +1,7 @@
-<Hello World> 
+<Hello World!> 
+ <script>
+document.getElementById("demo").innerHTML = "Hello JavaScript!";
+</script> 
 
  <script src="scripts/main.js"></script>
 
